@@ -1,0 +1,82 @@
+CREATE DATABASE floreria;
+
+USE floreria;
+
+-- Tabla para los arreglos florales
+CREATE TABLE arreglos 
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10, 2) NOT NULL,
+    imagen VARCHAR(255)                   -- Ruta de la imagen del arreglo
+);
+
+-- Tabla para usuarios (sistema de login)
+CREATE TABLE usuarios 
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    tipo_usuario enum('admin','usuario') NOT NULL,
+    email VARCHAR (255) NOT NULL, 
+    password VARCHAR(255) NOT NULL         -- Contraseña encriptada
+    
+);
+
+
+-- Tabla para registrar las compras (pedidos)
+CREATE TABLE compras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    direccion TEXT NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    metodo_pago VARCHAR(50) NOT NULL,  
+    id_usuario INT,
+    fechahora_entrega DATETIME DEFAULT CURRENT_TIMESTAMP,
+    estado enum('pendiente','aceptado', 'rechazado')
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id)  -- Relación con los usuarios
+);
+
+-- Tabla para los detalles de la compra (productos en el pedido)
+CREATE TABLE detalle_compra (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    compra_id INT NOT NULL,
+    arreglo_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    subtotal DECIMAL(10, 2) NOT NULL,  -- cantidad * precio
+    FOREIGN KEY (compra_id) REFERENCES compras(id),
+    FOREIGN KEY (arreglo_id) REFERENCES arreglos(id)
+);
+
+
+-- Crear un administrador inicial (nombre: Kare Baiza, tipo_usuario: admin, email: baizakaren77@gmail.com, contraseña: 123)
+INSERT INTO usuarios (nombre, tipo_usuario, email, password)
+VALUES ('Karen Baiza','admin', 'baizakaren77@gmail.com', MD5('123'));
+
+-- Crear un usuario (nombre: Cecilia, tipo_usuario: usuario, email:  cecy@gmail.com, contraseña: 123)
+INSERT INTO usuarios (nombre, tipo_usuario, email, password)
+VALUES ('Cecilia','usuario', 'cecy@gmail.com', MD5('123'));
+
+
+--INSET de compras
+INSERT INTO compras (nombre, direccion, email, metodo_pago, id_usuario, fechahora_entrega, estado)
+VALUES( 'Cecilia', 'Froylan curz manjarrez', 'cecy@gmail.com', 'Transferencia', 4, '2024-12-06 15:00:00', 'pendiente')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
