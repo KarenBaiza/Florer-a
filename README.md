@@ -30,9 +30,50 @@ Si eres un amante de la tecnología, la naturaleza o simplemente alguien que apr
 Florería KB: ¡Donde la tecnología florece! 🌷
 
 --------------------------------------------------------------------------------
+## **Instalación y Configuración**
+Sigue los pasos a continuación para ejecutar el proyecto localmente:
+
+1. **Clonar el Repositorio**:
+   ```bash
+   git clone https://github.com/JosueMa98/ICoffee.git
+   ```
+
+2. **Configurar el Entorno Local**:
+   - Instala **XAMPP** o cualquier otro servidor local.
+   - Asegúrate de iniciar Apache y MySQL.
+
+3. **Importar la Base de Datos**:
+   - Abre `phpMyAdmin` en tu servidor local.
+   - Importa el archivo `database/icoffee.sql` para crear las tablas necesarias.
+
+4. **Configurar la Conexión a la Base de Datos**:
+   - Abre el archivo `conexion.php` y configura tus credenciales:
+     ```php
+     $host = 'localhost';
+     $user = 'root';
+     $password = ''; // Contraseña vacía por defecto
+     $database = 'icoffee';
+     ```
+
+5. **Iniciar la Aplicación**:
+   - Guarda los archivos en la carpeta `htdocs` (si usas XAMPP).
+   - Accede a `http://localhost/ICoffee` desde tu navegador.
 
 
 
+## **Créditos**
+- **Desarrollador**: Victor Josué Maldonado Arana
+- **Institución**: Instituto Tecnológico de Culiacán
+- **Contacto**: [Correo electrónico](L20171583@culiacan.tecnm.mx)
+
+---
+
+## **Licencia**
+Este proyecto está licenciado bajo la [Licencia Apache 2.0](LICENSE).
+
+---
+
+## **Imágenes**
 
 
 
