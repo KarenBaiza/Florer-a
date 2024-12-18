@@ -35,7 +35,7 @@ Sigue los pasos a continuación para ejecutar el proyecto localmente:
 
 1. **Clonar el Repositorio**:
    ```bash
-   git clone https://github.com/JosueMa98/ICoffee.git
+      https://github.com/KarenBaiza/Florer-a.git
    ```
 
 2. **Configurar el Entorno Local**:
@@ -62,9 +62,9 @@ Sigue los pasos a continuación para ejecutar el proyecto localmente:
 
 
 ## **Créditos**
-- **Desarrollador**: Victor Josué Maldonado Arana
+- **Desarrollador**: Baiza Orona Karen Bibiana
 - **Institución**: Instituto Tecnológico de Culiacán
-- **Contacto**: [Correo electrónico](L20171583@culiacan.tecnm.mx)
+- **Contacto**: [Correo electrónico](L20170599@culiacan.tecnm.mx)
 
 ---
 
@@ -74,6 +74,15 @@ Este proyecto está licenciado bajo la [Licencia Apache 2.0](LICENSE).
 ---
 
 ## **Imágenes**
+![image](https://github.com/user-attachments/assets/fb65c1fe-6c2a-4242-a372-365aa24cf3a9)
+![image](https://github.com/user-attachments/assets/ad15ffa6-0392-43db-be66-1590c88d0556)
+![image](https://github.com/user-attachments/assets/61e020a2-3020-4bf0-a3ce-12d63c3987b5)
+Panel de Administrador:
+![image](https://github.com/user-attachments/assets/8090a0c2-8047-42aa-b7b9-3c1972754744)
+![image](https://github.com/user-attachments/assets/bd8153e2-42b4-4041-b2f4-a6b6e5b23a2a)
+
+
+
 
 
 
